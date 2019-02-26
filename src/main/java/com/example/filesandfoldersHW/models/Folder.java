@@ -28,6 +28,8 @@ public class Folder {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+
+
     public Folder(String title, User user){
         this.title = title;
         this.files = new ArrayList<>();
@@ -60,5 +62,13 @@ public class Folder {
 
     public void setFiles(List<File> files) {
         this.files = files;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
